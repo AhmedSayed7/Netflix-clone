@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 export default function useOffSetTop(top: number) {
   const [offsetTop, setOffSetTop] = useState(false);
   const onScroll = useCallback(() => {
-    if (window.pageYOffset > top) {
+    if (window.scrollY > top) {
       setOffSetTop(true);
     } else {
       setOffSetTop(false);
