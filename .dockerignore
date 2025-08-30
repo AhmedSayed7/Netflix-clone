@@ -1,3 +1,25 @@
-.*
-build
+# Ignore dependencies and build output
 node_modules
+dist
+build
+
+# Ignore version control and misc
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+README.md
+*.log
+
+# Ignore sensitive files
+.env
+.env.local
+
+# Editor settings
+.vscode
+.idea
+
+# Optional: Ignore test files
+__tests__/
+*.test.*
+*.spec.*
