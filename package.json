@@ -1,12 +1,13 @@
 {
   "name": "netflix-clone-using-react-typescript-mui",
-  "version": "0.1.1",
+  "version": "0.1.2", // 🔄 Bump version
   "type": "module",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit" // 🆕 optional type-only check
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
@@ -23,14 +24,20 @@
     "slick-carousel": "^1.8.1",
     "video.js": "^8.3.0",
     "videojs-youtube": "^3.0.1",
-    "vite-tsconfig-paths": "^3.5.2"
+    "vite": "^5.2.10", // 🆙 UPDATED from 3.2.2 to latest
+    "vite-tsconfig-paths": "^4.2.0" // 🆙 compatible with Vite 5
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@types/react-slick": "^0.23.10",
-    "@vitejs/plugin-react": "^2.2.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.1"
+    "@vitejs/plugin-react": "^4.1.0", // 🆙 updated for Vite 5
+    "typescript": "^4.6.4"
+  },
+  "resolutions": {
+    "nanoid": "^4.0.0",
+    "postcss": "^8.4.38",
+    "rollup": "^4.16.0",
+    "brace-expansion": "^2.0.1"
   }
 }
