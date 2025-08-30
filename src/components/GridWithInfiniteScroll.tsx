@@ -13,6 +13,7 @@ interface GridWithInfiniteScrollProps {
   data: PaginatedMovieResult;
   handleNext: (page: number) => void;
 }
+
 export default function GridWithInfiniteScroll({
   genre,
   data,
@@ -45,13 +46,16 @@ export default function GridWithInfiniteScroll({
         <Typography
           variant="h5"
           sx={{ color: "text.primary", mb: 2 }}
-        >{`${genre.name} Movies`}</Typography>
+        >
+          {`${genre.name} Movies`}
+        </Typography>
+
         <Grid container spacing={2}>
           {data.results
             .filter((v) => !!v.backdrop_path)
-            .map((video, idx) => (
+            .map((video) => (
               <Grid
-                key={`${video.id}_${idx}`}
+                key={video.id}
                 item
                 xs={6}
                 sm={3}
@@ -63,7 +67,11 @@ export default function GridWithInfiniteScroll({
             ))}
         </Grid>
       </Container>
-      <Box sx={{ display: "hidden" }} ref={intersectionRef} />
+
+      <Box
+        sx={{ visibility: "hidden" }}
+        ref={intersectionRef}
+      />
     </>
   );
 }
